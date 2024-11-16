@@ -1,0 +1,28 @@
+/* TodoItem.module.css */
+.todoItemContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.todoText {
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.deleteButton {
+  background-color: #ff0050;
+  color: white;
+}
