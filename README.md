@@ -35,7 +35,7 @@ Research for storage management methods that allow use locally. Persist tasks ac
 
 ### 5. Import To-Do List:<br>
 -Implement a feature to allow users to import the tasks in bulk thru CSV, or Excel.<br>
--A sample input file is attached, filename: *import_todo*
+-A sample input file is attached, filename: *import_todo* <br>
 -The import data format must have the following columns:<br>
   -task_name (Task name)<br>
   -due_date (Task due date in YYYY-MM-DD format)<br>
