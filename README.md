@@ -1,40 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+**Todo-App in Next.js**
 
-## Getting Started
-
-First, run the development server:
-
-```bash
+*Command to Run*
+cd winsing-todo-app
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*1. Basic Functionality*:
+-Users can list to-do items.
+-Users can add new to-do items.
+  -Steps: Enter the task, click the Add Task button, popped up modal with duedate & category              input
+-Users can delete to-do items.
+-Users can edit to-do items.
+-Users can mark to-do items as complete/incomplete.
+-Users should be able to set a due date for each task.
+-Users should be able to categorize tasks (e.g., Work, Personal, Urgent). Implement a dropdown   or radio buttons for selecting categories when adding a task.
+  -Red: Urgent
+  -Blue: Work
+  -Yellow: Personal
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+*2. Pagination*:
+-Implement pagination to control the number of tasks displayed on a single listing page.
+-Provide a dropdown or slider for users to select the number of tasks per page (e.g., 5, 10,     15, or 20 tasks).
+-Display pagination controls (e.g., "Previous," "Next," page numbers) to allow users to          navigate through pages easily.
+-Indicate the current page and the total number of pages available based on the total number of  tasks.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+*3. Searching, Filtering and Sorting*:
+-Implement a search bar that allows users to filter tasks based on keywords in the task description
+-Implement functionality to filter tasks based on their completion status (e.g., show only completed tasks, only incomplete tasks).
+-Allow sorting of tasks by due date, with options for ascending or descending order.
+  - Additionally, Manual Order is added as third options for reordering the task through drag-      and-drop
+  - If the ascending or descending order is applied, the reordering will allowed only between       same date
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+*4. Persistent Storage*:
+Research for storage management methods that allow use locally. Persist tasks across page reloads. When the application is reopened, previously added tasks should be displayed.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*5. Import To-Do List*:
+-Implement a feature to allow users to import the tasks in bulk thru CSV, or Excel.
+-The import data format must have the following columns:
+  -task_name (Task name)
+  -due_date (Task due date in YYYY-MM-DD format)
+  -category (Category can be "Urgent", "Work", or "Personal")
 
-## Learn More
+*6. Export as Report*:
+-Implement an export feature which allows users to export or download to-do items in Excel format.
 
-To learn more about Next.js, take a look at the following resources:
+*7. Calendar View* :
+-Create a calendar component that displays tasks based on their due dates.
+-Each day in the calendar should show the tasks that are due on that date.
+-Assign different colors to tasks based on their category (e.g., Work, Personal, Urgent). Use a  consistent color scheme that makes it easy for users to identify categories at a glance.
+  -Red: Urgent
+  -Blue: Work
+  -Yellow: Personal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+*8. Drag-and-Drop Reordering* :
+-Allow users to reorder tasks by dragging and dropping them.
+-Done, but sometimes the drag will fail, need terminate and rerun the application
