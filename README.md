@@ -1,5 +1,10 @@
 # Todo-App in Next.js
 
+![image](https://github.com/user-attachments/assets/b14157d0-c5ca-4764-96c7-20e060fda50d)
+
+![image](https://github.com/user-attachments/assets/e601662f-1872-4dfc-a725-07e39a834c74)
+
+
 ## Command to Run <br>
 cd winsing-todo-app <br>
 npm run dev
